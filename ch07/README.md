@@ -114,11 +114,11 @@ The class below can rely on it. It goes in *Section 7.1.5*:
 
 > Moreover, the synthesized versions for copy, assignment, and destruction work correctly for classes that have **vector or string members**.
 
-Hence the class below which used only built-in type and strings can rely on the default version of copy and assignment. (by @Mooophy)
+Hence the class below which used only built-in type and strings can rely on the default version of copy and assignment.
 
 ## Exercise 7.26 [Header](ex7_26.h)|[CPP](ex7_26.cpp)
 
-## Exercise 7.27 [Class](ex7_27.h)|[Test](ex7_27_TEST.cpp)
+## Exercise 7.27 [Class](ex7_27.h)|[Test](ex7_27.cpp)
 
 ## Exercise 7.28
 
@@ -194,9 +194,6 @@ private:
 };
 
 Type Exercise::setVal(Type parm) {  // first is `string`, second is `double`
-    val = parm + initVal();     // Exercise::initVal()
-    return val;
-}
 ```
 
 **fixed**
@@ -229,7 +226,7 @@ and `Exercise::initVal()` should be defined.
 
 ```cpp
 struct X {
-  X (int i, int j): base(i), rem(i % j) { }
+  X (int i, int j): base(i), rem(base % j) { }
   int base, rem;
 };
 ```
@@ -281,7 +278,9 @@ private:
 };
 ```
 
-## Exercise 7.41 [Header](ex7_41.h)|[Cpp](ex7_41.cpp)|[Test](ex7_41_TEST.cpp)
+## Exercise 7.41 [Header](ex7_41_a.h)|[Header](ex7_41_b.h)|[Cpp](ex7_41.cpp)|[Test](ex7_41_TEST.cpp)
+
+We can certainly use the previous file to define Sales_data class. But this header file looks a bit ugly. So, we can use ex7_41_b.h + ex7_41.cpp to define class.
 
 ## Exercise 7.42
 
@@ -375,7 +374,7 @@ But the `std::string` is different. In ordinary, we use `std::string` to replace
 
 ```cpp
 void setYourName(std::string); // declaration.
-setYourName("pezy"); // just fine.
+setYourName("porlain"); // just fine.
 ```
 
 it is very natural.
