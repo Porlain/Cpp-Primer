@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+
 # cpp_learning
+
 =======
+
 # cpp_learning
 
 [![GitHub license](https://img.shields.io/badge/license-CC0-blue.svg)](https://raw.githubusercontent.com/Mooophy/Cpp-Primer/master/LICENSE)
@@ -79,4 +82,3 @@ p2  = &b; //true
 ```
 
 **[Reference Documents](https://github.com/Mooophy/Cpp-Primer/)**
->>>>>>> master
