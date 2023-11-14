@@ -1,9 +1,9 @@
 /*
+ * @Create: Created by Porlain on 2023
  * @Author: Porlain szbj2023@163.com
- * @Date: 2023-11-09 20:45:29
- *
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
+ * @LastEditTime: 2023-11-14 13:47:19
  */
+
 
 // We can certainly use the previous file to define Sales_data class
 // But this header file looks a bit ugly

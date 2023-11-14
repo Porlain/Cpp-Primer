@@ -1,13 +1,9 @@
 /*
- * @Author: porlainp szbj2023@163.com
- * @Date: 2023-11-08 10:01:21
- * @LastEditors: porlainp szbj2023@163.com
- * @LastEditTime: 2023-11-08 10:21:38
- * @FilePath: \git_project\ch07\ex7_21.h
- * @Description: 
- * 
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ * @Create: Created by Porlain on 2023
+ * @Author: Porlain szbj2023@163.com
+ * @LastEditTime: 2023-11-14 13:46:20
  */
+
 
 #ifndef CP5_ex7_21_h
 #define CP5_ex7_21_h

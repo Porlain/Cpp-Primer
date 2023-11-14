@@ -1,12 +1,7 @@
 /*
+ * @Create: Created by Porlain on 2023
  * @Author: Porlain szbj2023@163.com
- * @Date: 2023-11-08 14:39:03
- * @LastEditors: Porlain szbj2023@163.com
- * @LastEditTime: 2023-11-08 14:45:33
- * @FilePath: \cpp_learning\ch07\ex7_22.h
- * @Description: 
- * 
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ * @LastEditTime: 2023-11-14 13:46:28
  */
 
 #ifndef CP5_ex7_22_h
