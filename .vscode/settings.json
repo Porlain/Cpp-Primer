@@ -41,6 +41,9 @@
         "typeinfo": "cpp",
         "cstring": "cpp",
         "list": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "numeric": "cpp"
     }
 }

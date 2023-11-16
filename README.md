@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-# cpp_learning
-
-=======
 
 # cpp_learning
 
