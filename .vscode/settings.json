@@ -44,6 +44,8 @@
         "forward_list": "cpp",
         "functional": "cpp",
         "iterator": "cpp",
-        "numeric": "cpp"
+        "numeric": "cpp",
+        "map": "cpp",
+        "set": "cpp"
     }
 }
