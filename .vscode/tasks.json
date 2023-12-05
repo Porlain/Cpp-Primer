@@ -14,7 +14,9 @@
                 // "${fileDirname}\\*.cc",
                 "${file}",
                 "-o",
-                "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe"
+                // Use this configuration after 14 chapters
+                "${fileDirname}\\..\\exe\\${fileBasenameNoExtension}.exe"
+                // "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
