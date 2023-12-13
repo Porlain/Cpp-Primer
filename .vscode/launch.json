@@ -9,8 +9,8 @@
             "type": "cppdbg",
             "request": "launch",
             // Use this configuration after 14 chapters
-            "program": "${fileDirname}\\..\\exe\\${fileBasenameNoExtension}.exe",//同task.json中的
-            // "program": "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe",
+            // "program": "${fileDirname}\\..\\exe\\${fileBasenameNoExtension}.exe",//同task.json中的
+            "program": "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
