@@ -8,14 +8,8 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                // "${workspaceFolder}\\ch06\\fact.cc","${workspaceFolder}\\ch06\\factMain.cc",
-                // if you want to execute different files,then you should change this parameter
-                // please write the file you want to co compile
-                // "${fileDirname}\\*.cc",
                 "${file}",
                 "-o",
-                // Use this configuration after 14 chapters
-                // "${fileDirname}\\..\\exe\\${fileBasenameNoExtension}.exe"
                 "${fileDirname}\\exe\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
