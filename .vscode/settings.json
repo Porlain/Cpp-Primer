@@ -46,7 +46,8 @@
         "iterator": "cpp",
         "numeric": "cpp",
         "map": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "unordered_set": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
