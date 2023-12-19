@@ -22,6 +22,7 @@ public:
     Sales_data &operator+=(const Sales_data &); // compound-assignment
     Sales_data &operator-=(const Sales_data &); // compound-substraction
     Sales_data &operator=(const Sales_data &);
+    Sales_data &operator=(const std::string &);
     explicit operator std::string() const { return bookNo; }
     explicit operator double() const { return avg_price(); }
 

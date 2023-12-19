@@ -1,7 +1,7 @@
 /*
  * @Create: Created by Porlain on 2023
  * @Author: Porlain szbj2023@163.com
- * @LastEditTime: 2023-12-05 11:25:30
+ * @LastEditTime: 2023-12-19 14:15:21
  */
 #include "ex14_45.h"
 
@@ -53,9 +53,18 @@ Sales_data &Sales_data::operator-=(const Sales_data &rhs)
 //
 // here
 //
-Sales_data &Sales_data::operator=(const Sales_data &isbn)
+Sales_data &Sales_data::operator=(const Sales_data &rhs)
 {
-    *this = Sales_data(isbn);
+    this->bookNo = rhs.bookNo;
+    this->revenue = rhs.revenue;
+    this->units_sold = rhs.units_sold;
+    return *this;
+}
+
+// for ex17_04
+Sales_data &Sales_data::operator=(const std::string &rhs)
+{
+    *this = Sales_data(rhs);
     return *this;
 }
 
@@ -70,4 +79,10 @@ Sales_data &Sales_data::combine(const Sales_data &str)
 inline double Sales_data::avg_price() const
 {
     return units_sold ? revenue / units_sold : 0;
+}
+
+// for ex17_04
+bool compareIsbn(const Sales_data &lhs, const Sales_data &rhs)
+{
+    return lhs.isbn() < rhs.isbn();
 }
