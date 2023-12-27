@@ -63,12 +63,8 @@ In the first few chapters, (**using namespace std;** )will be used, which may be
 
 ☀️[沙漠之舟tx]([C++Primer第五版 习题答案 目录_c++primer第五版答案-CSDN博客](https://blog.csdn.net/shamozhizhoutx/article/details/81264498))
 
-
 Video explanation:
 
 ☀️[阿西拜编程]([19.8固有的不可移植的特性_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1z64y1U7hs?p=103&spm_id_from=pageDriver&vd_source=d0200ba2cee52451d0185d155216f8cf))
 
-
 ⛅️Some of the code in the homework was written according to the reference link. If there is any infringement, please contact me to delete it
-
-**The Chinese version of the answers will be organized after the English version is completed**
