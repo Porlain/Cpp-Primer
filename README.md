@@ -1,4 +1,3 @@
-
 # cpp_learning
 
 [![GitHub license](https://img.shields.io/badge/license-CC0-blue.svg)](https://raw.githubusercontent.com/Mooophy/Cpp-Primer/master/LICENSE)
@@ -21,16 +20,6 @@ g++ -std=c++14 some_ex.cpp -o some_ex
 ```
 clang++ -std=c++1y some_ex.cpp -o some_ex
 ```
-
-### note
-
-This document is suitable for students with a certain foundation in C language or some understanding of C++to read.
-
-In the first few chapters, (**using namespace std;** )will be used, which may be a bit unfriendly for those who only read C++Primer books
-
-**The Chinese version of the answers will be organized after the English version is completed**
-
-**Tips: You can try to use the method below, which only includes what is needed instead of using (using namespace std;). However, if you only use (using namespace std;), it may produce some issues when your project is large. For the introduction of the program header file section, we will use (using namespace std;).**
 
 ### Contents
 
@@ -58,22 +47,28 @@ In the first few chapters, (**using namespace std;** )will be used, which may be
   - [Chapter 18. Tools for Large Programs](ch18)
   - [Chapter 19. Specialized Tools and Techniques](ch19)
 
-**Tips: distinguish `const *int p` and `int *const p`，easy to understand explanation, const will protect the nearest variable:**
+### note
 
-`const *int p` , we can't modify *p, but we can modify p. It's logic seems to be `const (*int p`), int is protected.
+This document is suitable for students with a certain foundation in C language or some understanding of C++to read.
 
-`int *const p`, we can't modify the value of p, but we can modify *p, It's logic seems to be `int (const *p)`, the point is protected.
+In the first few chapters, (**using namespace std;** )will be used, which may be a bit unfriendly for those who only read C++Primer books
 
-```c++
-const *int p1 = &a;
-int *const p2 = &a;
-
-p1 = &b; // error
-*p1 = 10; // true
-
-p2  = &b; //true
-*p2 = 10; // error
-
-```
+**Tips: You can try to use the method below, which only includes what is needed instead of using (using namespace std;). However, if you only use (using namespace std;), it may produce some issues when your project is large. For some simple programs, we will use (using namespace std;).**
 
 **[Reference Documents](https://github.com/Mooophy/Cpp-Primer/)**
+
+☀️[[Mooophy](https://github.com/Mooophy/Cpp-Primer/)]
+
+☀️[pezy]([项目目录预览 - CppPrimer - GitCode](https://gitcode.com/mirrors/pezy/cppprimer/tree/master?utm_source=csdn_github_accelerator&isLogin=1))
+
+☀️[沙漠之舟tx]([C++Primer第五版 习题答案 目录_c++primer第五版答案-CSDN博客](https://blog.csdn.net/shamozhizhoutx/article/details/81264498))
+
+
+Video explanation:
+
+☀️[阿西拜编程]([19.8固有的不可移植的特性_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1z64y1U7hs?p=103&spm_id_from=pageDriver&vd_source=d0200ba2cee52451d0185d155216f8cf))
+
+
+⛅️Some of the code in the homework was written according to the reference link. If there is any infringement, please contact me to delete it
+
+**The Chinese version of the answers will be organized after the English version is completed**

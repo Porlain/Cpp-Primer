@@ -1,3 +1,23 @@
+### Tips
+
+**distinguish `const *int p` and `int *const p`，easy to understand explanation, const will protect the nearest variable:**
+
+`const *int p` , we can't modify *p, but we can modify p. It's logic seems to be `const (*int p`), int is protected.
+
+`int *const p`, we can't modify the value of p, but we can modify *p, It's logic seems to be `int (const *p)`, the point is protected.
+
+```c++
+const *int p1 = &a;
+int *const p2 = &a;
+
+p1 = &b; // error
+*p1 = 10; // true
+
+p2  = &b; //true
+*p2 = 10; // error
+
+```
+
 ### Exercise 2.1
 
 > What are the differences between int, long, long long,and short? Between an unsigned and a signed type? Between a float and a double?
@@ -62,7 +82,6 @@ Output:
 0
 ```
 
-
 ## Exercise 2.5
 
 > Determine the type of each of the following literals. Explain
@@ -81,7 +100,6 @@ Output:
 
 (d): decimal, unsigned decimal, double, double.
 
-
 ## Exercise 2.6
 
 > What, if any, are the differences between the following
@@ -98,7 +116,6 @@ The second line:
 
 1. `int month = 09` is invalid, cause octal don't have digit `9`.
 2. `day` is octal.
-
 
 ## Exercise 2.7
 
@@ -122,7 +139,6 @@ Reference:
 
 - [ASCII Table](http://www.asciitable.com/)
 
-
 ## Exercise 2.8
 
 > Using escape sequences, write a program to print 2M followed
@@ -139,7 +155,6 @@ int main()
     return 0;
 }
 ```
-
 
 ## Exercise 2.9
 
@@ -182,7 +197,6 @@ double salary = wage = 9999.99;
 double i = 3.14;
 ```
 
-
 ## Exercise 2.10
 
 > What are the initial values, if any, of each of the following variables?
@@ -204,7 +218,6 @@ int main()
 PS: please read P44 in the English version, P40 in Chinese version to get more.
 The note: Uninitialized objects of built-in type defined inside a function body have a undefined value. Objects of class type that we do not explicitly inititalize have a value that is defined by class.
 
-
 ## Exercise 2.11
 
 > Explain whether each of the following is a declaration or a
@@ -218,7 +231,6 @@ The note: Uninitialized objects of built-in type defined inside a function body 
   (b): definition.
   (c): declaration.
 
-
 ## Exercise 2.12
 
 > Which, if any, of the following names are invalid?
@@ -230,7 +242,6 @@ The note: Uninitialized objects of built-in type defined inside a function body 
 - (e) double Double = 3.14;
 
 `a`, `c`, `d` are invalid.
-
 
 ## Exercise 2.13
 
@@ -246,7 +257,6 @@ int main()
 ```
 
 `100`, since the global `i` was hidden by the local `i`.
-
 
 ## Exercise 2.14
 
@@ -265,7 +275,6 @@ Legal. Output:
 
 Note: Such naming is considered as bad practise.
 
-
 ## Exercise 2.15
 
 > Which of the following definitions, if any, are invalid? Why?
@@ -281,7 +290,6 @@ Note: Such naming is considered as bad practise.
 (c): valid.
 (d): invalid. a reference must be initialized.
 ```
-
 
 ## Exercise 2.16
 
@@ -301,7 +309,6 @@ Note: Such naming is considered as bad practise.
 (d): valid. but value will be truncated.
 ```
 
-
 ## Exercise 2.17
 
 > What does the following code print?
@@ -314,12 +321,10 @@ std::cout << i << " " << ri << std::endl;
 
 `10 10`
 
-
 ## Exercise 2.18
 
 > Write code to change the value of a pointer. Write code to
 > change the value to which the pointer points.
-
 
 ## Exercise 2.19
 
@@ -343,7 +348,6 @@ the reference is "another name" of an **object**.
 4. a reference must be initialized.
    a pointer need **not be** initialized at the time it is defined.
 
-
 ## Exercise 2.20
 
 > What does the following program do?
@@ -355,7 +359,6 @@ int *p1 = &i;
 ```
 
 `p1` pointer to `i`, `i`'s value changed to 1764(42*42)
-
 
 ## Exercise 2.21
 
@@ -375,7 +378,6 @@ int *p1 = &i;
 (c): legal.
 ```
 
-
 ## Exercise 2.22
 
 Assuming p is a pointer to int, explain the following code:
@@ -389,13 +391,11 @@ if (p) // whether p is nullptr?
 
 if (*p) // whether the value pointed by p is zero?
 
-
 ## Exercise 2.23
 
 > Given a pointer p, can you determine whether p points to a valid object? If so, how? If not, why not?
 
 No. Because more information needed to determine whether the pointer is valid or not.
-
 
 ## Exercise 2.24
 
@@ -409,7 +409,6 @@ long *lp = &i;
 
 Inherited from C, `void*` is a special pointer that may point to any type, hence the second line is legal.
 For type safety, C++ forbids implicit conversions like `long *lp = &i;`, thus such code is illegal.
-
 
 ## Exercise 2.25
 
@@ -426,7 +425,6 @@ For type safety, C++ forbids implicit conversions like `long *lp = &i;`, thus su
 (c): ip is a pointer to int, and ip2 is an int.
 ```
 
-
 ## Exercise 2.26
 
 > Which of the following are legal? For those that are illegal,
@@ -439,7 +437,6 @@ const int sz = cnt; // legal.
 ++cnt;              // legal.
 ++sz;               // illegal, attempt to write to const object(sz).
 ```
-
 
 ## Exercise 2.27
 
@@ -455,7 +452,6 @@ const int &const r2;        // illegal, r2 is a reference that cannot be const.
 const int i2 = i, &r = i;   // legal.
 ```
 
-
 ## Exercise 2.28
 
 > Explain the following definitions. Identify any that are illegal.
@@ -469,7 +465,6 @@ const int *p;           // legal. a pointer to const int.
 ```
 
 **Tips: const must be initialized.**
-
 
 ## Exercise 2.29
 
@@ -489,7 +484,6 @@ ic = *p3;   // illegal. ic is a const int.
 
 **Tips: The pointer must point to the same object.**
 
-
 ## Exercise 2.30
 
 > For each of the following declarations indicate whether the
@@ -506,7 +500,6 @@ p2 is low-level const.
 p3 is both low-level and top-level const.
 r2 is low-level const.
 
-
 ## Exercise 2.31
 
 > Given the declarations in the previous exercise determine
@@ -520,7 +513,6 @@ p2 = p1; // legal, we can convert int* to const int*.
 p1 = p3; // illegal, p3 has a low-level const but p1 doesn't.
 p2 = p3; // legal, p2 has the same low-level const qualification as p3.
 ```
-
 
 ## Exercise 2.32
 
@@ -536,7 +528,6 @@ int null = 0, *p = &null;
 int null = 0, *p = nullptr;
 ```
 
-
 ## Exercise 2.33
 
 > Using the variable definitions from this section, determine
@@ -551,7 +542,6 @@ e=42; // ERROR, e is an const int *. correct: e = &c;
 g=42; // ERROR, g is a const int& that is bound to ci.
 ```
 
-
 ## Exercise 2.34
 
 > Write a program containing the variables and assignments from the
@@ -560,7 +550,6 @@ g=42; // ERROR, g is a const int& that is bound to ci.
 > whether your predictions in the previous exercise were correct.
 > If not, study the examples until you can convince yourself you know
 > ￼￼what led you to the wrong conclusion.
-
 
 ## Exercise 2.35
 
@@ -579,7 +568,6 @@ p is const int *.
 j2 is const int.
 k2 is const int&.
 
-
 ## Exercise 2.36
 
 > In the following code, determine the type of each variable
@@ -596,7 +584,6 @@ decltype((b)) d = a;
 `c` is an int, `d` is a reference of `a`.
 all their value are `4`.
 
-
 ## Exercise 2.37
 
 > Assignment is an example of an expression that yields a reference type. The type is a reference to the type of the left-hand operand. That is, if i is an int, then the type of the expression i = x is int&. Using that knowledge, determine the type and value of each variable in this code:
@@ -609,7 +596,6 @@ decltype(a = b) d = a;
 
 `c` is an int, `d` is a reference of int.
 the value: a=3, b=4, c=3, d=3
-
 
 ## Exercise 2.38
 
@@ -632,7 +618,6 @@ decltype(r) d = r;
 
 More? Look at [here](http://stackoverflow.com/questions/21369113/what-is-the-difference-between-auto-and-decltypeauto-when-returning-from-a-fun) and [here](http://stackoverflow.com/questions/12084040/decltype-vs-auto)
 
-
 ## Exercise 2.39
 
 > Compile the following program to see what happens when
@@ -649,7 +634,6 @@ int main()
 
 Error message: [Error] expected ';' after struct definition
 
-
 ## Exercise 2.40
 
 > Write your own version of the Sales_data class.
@@ -665,13 +649,11 @@ struct Sale_data
 };
 ```
 
-
 ## Exercise 2.41
 
 > Use your Sales_data class to rewrite the exercises in §
 > 1.5.1(p. 22), § 1.5.2(p. 24), and § 1.6(p. 25). For now, you should define
 > your Sales_data class in the same file as your main function.
-
 
 ## Exercise 2.42
 
